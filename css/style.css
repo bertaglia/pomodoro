@@ -59,14 +59,6 @@ div {
     cursor:pointer;
 }
 
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
-
-
 span.footer {
     font-size: 12px;
     color: white;
@@ -80,16 +72,16 @@ span.footer {
 span.footer a {
     text-decoration: none;
 }
-
-span.header {
-    color: #f00;
-    display: block;
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    text-align: center;
+span.footer i {
+    color: white;
+    padding-right: 5px;
 }
 
-span.header a {
-    text-decoration: none;
-}
+.grow { transition: all .3s ease-in-out; }
+.grow:hover { transform: scale(1.5); }
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

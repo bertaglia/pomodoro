@@ -38,7 +38,7 @@ $(document).ready(function() {
                 if (sess) {
                     NProgress.set(1 - (clock.getTime().time / (sesTime*60)));
                 } else {
-                    NProgress.set(1 - (clock.getTime().time / (sesTime*60)));
+                    NProgress.set(1 - (clock.getTime().time / (brkTime*60)));
                 }
             }
         }
@@ -73,10 +73,13 @@ $(document).ready(function() {
     });
 
     $('#add1min').click(function(e) {
-        clickAudio.play();
+        if (sess) {
+            $('#addSession').trigger('click');
+        } else {
+            $('#addBreak').trigger('click');
+        }
         clock.setTime(clock.getTime().time + 61);
     });
-
 
     $('#remBreak').click(function(e) {
         clickAudio.play();
