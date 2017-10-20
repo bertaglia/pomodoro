@@ -109,17 +109,4 @@ $(document).ready(function() {
             $('#sessionTime')[0].innerText = ('00' + sesTime).slice(-2);
         }
     });
-
-
-
-
-
-    //interval
-//NProgress.inc(0.2);
-//NProgress.remove();
-    /*
-
-
-    */
-
 });
