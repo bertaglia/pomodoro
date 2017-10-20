@@ -3,7 +3,7 @@ var sess = true;
 var brkTime = 5;
 var sesTime = 25;
 var clickAudio = new Audio('media/click1.wav');
-var bellAudio = new Audio('media/bell.wav');
+var bellAudio = new Audio('media/bell.mp3');
 
 $(document).ready(function() {
 
