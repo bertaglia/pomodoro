@@ -1,0 +1,95 @@
+body {
+    /* font-family: 'Electrolize', sans-serif; */
+    background: url("../img/dark.png");
+    font-family: 'Electrolize', sans-serif;
+}
+
+/*
+div {
+    border: 1px solid red;
+}
+*/
+
+.flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+    color: #FFF;
+    visibility: hidden;
+}
+
+.clock.center-block.flip-clock-wrapper {
+    width: 350px;
+    margin: 1em auto !important;
+    padding-left: 1.5em;
+    color: #FFF;
+    font-size: 20px;
+}
+
+#cont {
+    color: white;
+    width: 400px;
+    margin-top: 8%;
+}
+
+#buttons1 {
+    height: 100px;
+    font-size: 22px;
+}
+
+#labels1 {
+    font-size: 22px;
+}
+
+#controls1 {
+    height: 60px;
+}
+
+#info1 {
+    height: 60px;
+}
+
+
+#breakTime, #sessionTime {
+    font-size: 50px;
+}
+
+.white {
+    color:#ffffff;
+}
+
+.chCursor {
+    cursor:pointer;
+}
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+span.footer {
+    font-size: 12px;
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+span.footer a {
+    text-decoration: none;
+}
+
+span.header {
+    color: #f00;
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+span.header a {
+    text-decoration: none;
+}

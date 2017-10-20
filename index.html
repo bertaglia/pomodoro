@@ -4,64 +4,106 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Free Code Camp javascript Calculator Project">
-    <meta name="keywords" content="FCC, FreeCodeCamp, JavaScript calculator, calculator">
+    <meta name="description" content="Free Code Camp Pomodoro Clock Project">
+    <meta name="keywords" content="FCC, FreeCodeCamp, Pomodoro Clock, Pomodoro, Clock">
     <meta name="author" content="Carlos Bertaglia">
     <meta name="robots" content="index, follow">
-    <link rel="shortcut icon" type="image/*" href="img/math.ico">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/*" href="img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='css/nprogress.css'/>
     <link rel="stylesheet" href="css/style.css">
-    <title>FCC JS Calculator Project</title>
+    <link rel="stylesheet" href="css/flipclock.css">
+    <title>FCC Pomodoro Clock</title>
 
     <!-- The Open Graph protocol -->
-    <meta property="og:title" content="FCC JS Calculator Project">
-    <meta property="og:description" content="Free Code Camp Javascript Calculator Projetct">
+    <meta property="og:title" content="FCC Pomodoro Clock">
+    <meta property="og:description" content="Free Code Camp Pomodoro Clock Project">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://bertaglia.net/calculator/img/algebra.jpg">
-    <meta property="og:site_name" content="https://bertaglia.net/calculator">
+    <meta property="og:image" content="https://bertaglia.net/pomodoro/img/cover.png">
+    <meta property="og:site_name" content="https://bertaglia.net/pomodoro">
 
     <!-- twitter card -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="https://bertaglia.net/calculator/img/calculator-152-170371.png">
-    <meta name="twitter:site" content="https://bertaglia.net/calculator">
+    <meta name="twitter:image" content="https://bertaglia.net/pomodoro/img/cover.png">
+    <meta name="twitter:site" content="https://bertaglia.net/pomodoro">
     <meta name="twitter:creator" content="@carlosbertaglia">
-    <meta name="twitter:description" content="Free Code Camp Javascript Calculator Projetct">
-    <meta name="twitter:title" content="FCC JS Calculator Project">
-</head>
-
-
-
-	<link rel="stylesheet" href="css/flipclock.css">
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-	<script src="js/flipclock.js"></script>
+    <meta name="twitter:description" content="Free Code Camp Pomodoro Clock Project">
+    <meta name="twitter:title" content="FCC Pomodoro Clock Project">
 </head>
 
 <body>
-	<div class="clock" style="margin:2em;"></div>
-	<div class="message"></div>
+    <div id="cont" class="container">
+        <div id="labels1" class="row align-items-center text-center">
+            <div class="col"><span>Break</span></div>
+            <div class="col"><span>Session</span></div>
+        </div>
+        <div id="buttons1" class="row">
+            <div class="col text-center">
+                <i id="remBreak" class="material-icons md-36 chCursor">remove</i>
+                <span id="breakTime">05</span>
+                <i id="addBreak" class="material-icons md-36 chCursor">add</i>
+            </div>
+            <div class="col text-center">
+                <i id="remSession" class="material-icons md-36 chCursor">remove</i>
+                <span id="sessionTime">25</span>
+                <i id="addSession" class="material-icons md-36 chCursor">add</i>
+            </div>
+        </div>
+        <div class="row" id="clock1">
+            <div class="col text-center">
+                <div class="clock center-block" align="center"></div>
+            </div>
+        </div>
+        <div class="row align-items-center" id="controls1">
+            <div class="col text-center">
+                <i id="start1" class="material-icons md-48 chCursor" data-toggle="tooltip" data-placement="bottom" title="Start Counting">play_circle_outline</i>
+            </div>
+            <div class="col text-center">
+                <i id="stop1" class="material-icons md-48 chCursor" data-toggle="tooltip" data-placement="bottom" title="Pause/Stop">pause_circle_outline</i>
+            </div>
+            <div class="col text-center">
+                <i id="reset1" class="material-icons md-48 chCursor" data-toggle="tooltip" data-placement="bottom" title="Reset">restore</i>
+            </div>
+            <div class="col text-center">
+                <i id="add1min" class="material-icons md-48 chCursor" data-toggle="tooltip" data-placement="bottom" title="add 1 Min">exposure_plus_1</i>
+            </div>
+        </div>
+        <div class="row align-items-end" id="info1">
+            <div class="col text-center">
+                <span id="info2"></span> <!-- Session Time / Break Time, go get a coffee! -->
+            </div>
+        </div>
+    </div>
 
-	<script type="text/javascript">
-		var clock;
-
-		$(document).ready(function() {
-
-			clock = $('.clock').FlipClock({
-				clockFace: 'MinuteCounter'
-			});
-		});
-	</script>
-
-
-
-
-	<script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <!-- footer -->
+    <span class="footer">Made by <a target="_blank" href="https://github.com/bertaglia">Carlos Bertaglia</a><br>
+        Fork or suggest edits on <a target="_blank" href="https://github.com/bertaglia/pomodoro">GitHub</a> <br>
+        <a href="https://twitter.com/carlosbertaglia?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @carlosbertaglia</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a class="twitter-share-button" target="_blank" href="https://twitter.com/share" data-url="https://bertaglia.net/pomodoro" data-text="Free Code Camp Pomodoro Clock Project" data-via="carlosbertaglia" data-related="carlosbertaglia">Tweet about it.</a>
+   </span>
+   <!-- footer -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src='js/nprogress.js'></script>
+    <script src="js/flipclock.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
+
+
+<!--
+<div class="col text-center">
+    <button type="button" class="btn btn-light btn-lg white"><i class="material-icons">add_circle_outline</i></button>
+    <span id="breakTime">5</span>
+    <button type="button" class="btn btn-light btn-lg white"><i class="material-icons">add_circle_outline</i></button>
+</div>
+<div class="col text-center">
+    <button type="button" class="btn btn-light btn-lg white"><i class="material-icons">add_circle_outline</i></button>
+    <span id="sessionTime">25</span>
+    <button type="button" class="btn btn-light btn-lg white"><i class="material-icons">add_circle_outline</i></button>
+</div>
+-->
