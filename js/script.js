@@ -69,16 +69,12 @@ $(document).ready(function() {
         clock.stop();
         clock.setTime(sesTime * 60);
         NProgress.done();
-        var sess = true;
+        sess = true;
+        $('#info2')[0].innerText = '';
     });
 
     $('#add1min').click(function(e) {
-        if (sess) {
-            $('#addSession').trigger('click');
-        } else {
-            $('#addBreak').trigger('click');
-        }
-        clock.setTime(clock.getTime().time + 61);
+        clock.setTime(clock.getTime().time + 60);
     });
 
     $('#remBreak').click(function(e) {
